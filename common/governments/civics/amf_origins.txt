@@ -1,0 +1,45 @@
+origin_automated_mining_facility = {
+	is_origin = yes
+	icon = "gfx/interface/icons/origins/origins_resource_consolidation.dds"
+	picture = GFX_origin_third_time_charm
+
+	starting_colony = pc_abondoned_mining_world
+
+	max_once_global = yes
+
+	playable = {
+		OR = {
+			has_ancrel = yes
+			host_has_dlc = Federations
+		}
+	}
+
+	possible = {
+		ethics = { value = ethic_gestalt_consciousness }
+		
+	}
+
+	description = ""
+
+	modifier = { planet_pops_robotics_upkeep_mult = -0.05 }
+
+  has_secondary_species = {
+
+		traits = {
+    trait = trait_machine_worker
+
+		}
+	}
+
+	flags = { custom_start_screen first_contact_event Story7}
+
+	traits = {
+
+	}
+
+	advanced_start = yes
+
+	random_weight = {
+		base = 5
+	}
+}

@@ -1,0 +1,158 @@
+#civic_example = {
+#	playable = {}								# AND trigger, no scope; use this to prevent the civic from being selectable by the player (UI)
+#	potential = {}								# requirements list, see ../readme_requirements.txt
+#	possible = {}								# requirements list, see ../readme_requirements.txt
+#	pickable_at_start = yes / no				# default: yes
+#	modification = yes / no						# default: yes, set to no to prevent adding or removing this after creation of the empire
+#
+#	random_weight = { base = 5 }				# scriptable weight for randomizing a civic; required, else the civic will not get assigned randomly
+#
+#	modifier = {}								# modifier added to the country if the civic is selected and valid
+#	can_build_ruler_ship = yes / no				# default: no
+#	traits = { trait = ... }					# default: empty; trait set to enforce on the primary species. They cannot be removed, but more can be added if points/picks permit
+#	has_secondary_species = {					# default: none; if present, will enable secondary species customization in empire designer and will create secondary species & pops at galaxy generation time (see empire_init_create_capital_secondary_pops)
+#		traits = { trait = ... }					# default: empty; trait set to enforce on the secondary species. They cannot be removed, but more can be added if points/picks permit
+#	}
+#}
+
+##################
+# Machine Empire
+##################
+
+
+
+civic_machine_builder = {
+	description = "civic_tooltip_functional_architecture_effects"
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		planet_structures_cost_mult = -0.10
+		planet_structures_upkeep_mult = -0.10
+	}
+}
+
+civic_machine_factory_overclock = {
+	icon = "gfx/interface/icons/governments/civics/civic_machine_factory_overclock.dds"
+    potential = { authority = { value = auth_abandoned_machine } }
+    random_weight = { base = 5 }
+    modifier = {
+        leader_skill_levels = 1
+		species_leader_exp_gain = 0.1
+    }
+}
+
+civic_machine_unitary_cohesion = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		country_unity_produces_mult = 0.15
+	}
+}
+
+civic_machine_rockbreakers = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		planet_miners_minerals_produces_add = 1
+	}
+}
+
+civic_machine_zero_waste_protocols = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		planet_pops_robotics_upkeep_mult = -0.10
+	}
+}
+
+civic_machine_built_to_last = {
+	potential = {
+		authority = {
+			value = auth_ancient_machine_intelligence
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		pop_amenities_usage_no_happiness_mult = -0.15
+	}
+}
+
+civic_machine_ota_updates = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		empire_size_pops_mult = -0.20
+	}
+}
+
+civic_machine_warbots = {
+	potential = {
+		authority = {
+			OR = {
+				value = auth_ancient_machine_intelligence
+				value = auth_abandoned_machine
+			}
+		}
+	}
+	random_weight = { base = 5 }
+	modifier = {
+		army_damage_mult = 0.2
+		armies_upkeep_mult = -0.2
+	}
+}
+
+civic_machine_introspective = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		country_engineering_tech_research_speed = 0.20
+	}
+}
+
+civic_machine_delegated_functions = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		leaders_upkeep_mult = -0.25
+		country_leader_pool_size = 1
+	}
+}
+
+civic_machine_predictive_analysis = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		num_tech_alternatives_add = 1
+	}
+}
+
+civic_machine_replication = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	modifier = {
+		planet_pop_assembly_mult = 0.20
+	}
+}
+
+civic_machine_maintenance_protocols = {
+	potential = { authority = { value = auth_abandoned_machine } }
+	random_weight = { base = 5 }
+	description = civic_tooltip_machine_maintenance_protocols_effects
+}
+
+civic_machine_memorialist = {
+	playable = { host_has_dlc = "Necroids Species Pack" }
+	description = "civic_tooltip_memorialist_gestalt_effects"
+	potential = {
+		authority = { value = auth_abandoned_machine }
+	}
+	random_weight = { base = 5 }
+	possible = {
+		civics = {
+			NOR = {
+				value = civic_machine_terminator
+				value = civic_machine_assimilator
+			}
+		}
+	}
+}
