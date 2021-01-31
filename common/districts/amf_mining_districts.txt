@@ -138,16 +138,16 @@ district_mineing_housing = {
 	}
 }
 
-district_arcology_arms_industry = {
+district_mining_arms_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 	}
 
 	potential = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 	}
 
 	conversion_ratio = 1
@@ -245,16 +245,16 @@ district_arcology_arms_industry = {
 	}
 }
 
-district_arcology_civilian_industry = {
+district_mining_civilian_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 	}
 
 	potential = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 		exists = owner
 		owner = {
 			OR = {
@@ -355,14 +355,14 @@ district_arcology_leisure = {
 	is_capped_by_modifier = no
 
 	show_on_uncolonized = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 		from = {
 			is_regular_empire = yes
 		}
 	}
 
 	potential = {
-		uses_district_set = city_world
+		uses_district_set = automated_mining_world
 		owner = {
 			exists = owner
 			is_regular_empire = yes

@@ -1,5 +1,5 @@
 auth_abandoned_machine = {
-	machine_empire = yes
+	abandoned_machine_empire = yes
 	has_heir = no
 	election_type = none
 	has_factions = no
@@ -24,14 +24,13 @@ auth_abandoned_machine = {
 	}
 
 	traits = {
-		trait = trait_machine_unit
+		trait = trait_abandoned_machine
 	}
 
 	country_modifier = {
-		colony_start_num_pops_add = 2
-		station_gatherers_produces_mult = 0.1
-		empire_size_penalty_mult = 0.5
-		#pop_growth_speed_reduction = 0.5
+		colony_start_num_pops_add = 5
+		station_gatherers_produces_mult = 0.25
+		empire_size_penalty_mult = 0.75
 	}
 
 	tags = {

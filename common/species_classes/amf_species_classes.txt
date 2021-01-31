@@ -85,7 +85,7 @@ AMFMACHINE = {
 		}
 	}
 
-	graphical_culture = abandoned_machine_empire_02
+	graphical_culture = abandoned_machine_empire_01
 	move_pop_sound_effect = "robot_pops_move"
 
 	resources = {}

@@ -1,0 +1,12 @@
+gov_abandoned_machine_empire = {
+	ruler_title = RT_CPU
+	
+	should_force_rename = yes
+
+	possible = {
+		has_authority = auth_abandoned_machine
+
+	weight = {
+		base = 5
+	}
+}
